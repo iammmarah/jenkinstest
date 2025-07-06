@@ -22,7 +22,7 @@ def health_check():
 if __name__ == '__main__':
     # Run the Flask application on all available network interfaces (0.0.0.0)
     # and listen on port 5000. This is important for Docker container accessibility.
-    app.run(debug=True, host='0.0.0.0', port=6789)
+    app.run(host='0.0.0.0', port=6100)
 
 
 

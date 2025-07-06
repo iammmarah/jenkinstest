@@ -2,7 +2,7 @@
 
 # Use a lightweight official Python image as the base.
 # This ensures that Python and necessary dependencies are available.
-FROM python:3.9-slim-buster
+FROM python:3.12-slim
 
 # Set the working directory inside the container.
 # All subsequent commands will be executed relative to this directory.
@@ -21,7 +21,7 @@ COPY app.py .
 
 # Expose port 5000, which is the port our Flask application listens on.
 # This tells Docker that the container will listen on this port.
-EXPOSE 6789
+# EXPOSE 5000
 
 # Define the command to run when the container starts.
 # This will execute the Flask application.

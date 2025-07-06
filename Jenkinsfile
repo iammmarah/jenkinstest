@@ -11,7 +11,9 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: "${CREDENTIALS_ID}", url: "${REPO_URL}", branch: 'main'
+                // git credentialsId: "${CREDENTIALS_ID}", url: "${REPO_URL}", branch: 'main'
+                git  url: "${REPO_URL}", branch: 'main'
+
             }
         }
 

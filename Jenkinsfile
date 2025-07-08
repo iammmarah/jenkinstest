@@ -1,8 +1,8 @@
 pipeline {
     agent { 
         docker {
-            image 'docker:20.10.7'  // Docker CLI
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
+            image 'python:3.9-slim'
+            args '-v /var/run/docker.sock:/var/run/docker.sock -u root' // Add -u root
         }
       }
 

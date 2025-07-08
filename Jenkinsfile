@@ -1,8 +1,12 @@
 pipeline {
     agent { 
-        node {
-            label 'docker-python-flask-agent'
-            }
+        // node {
+        //     // label 'docker-python-flask-agent'
+        //     }
+        docker{
+            image 'python:3.9-slim'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
+        }
       }
 
     environment {

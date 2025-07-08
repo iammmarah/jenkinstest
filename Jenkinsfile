@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent { 
+        node {
+            label 'docker-python-flask-agent'
+            }
+      }
 
     environment {
         REPO_URL = 'https://github.com/iammmarah/jenkinstest.git'

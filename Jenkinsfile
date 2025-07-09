@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        dockerfile true
-    }  // Run initial stages on any agent
+    agent { dockerfile true } 
     
     environment {
         REPO_URL = 'https://github.com/iammmarah/jenkinstest.git'
@@ -17,13 +15,13 @@ pipeline {
         }
 
         stage('Build and Run') {
-            agent {
-                docker {
-                    image 'docker:latest'  // Official Docker CLI image
-                    args '-v /var/run/docker.sock:/var/run/docker.sock -u root'
-                    // Mounts host's Docker socket and runs as root
-                }
-            }
+            // agent {
+            //     docker {
+            //         image 'docker:latest'  // Official Docker CLI image
+            //         args '-v /var/run/docker.sock:/var/run/docker.sock -u root'
+            //         // Mounts host's Docker socket and runs as root
+            //     }
+            // }
             steps {
                 script {
                     // Verify Docker connectivity

@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docekrfile true
+        dockerfile true
     }  // Run initial stages on any agent
     
     environment {

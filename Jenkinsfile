@@ -1,5 +1,7 @@
 pipeline {
-    agent any  // Run initial stages on any agent
+    agent {
+        docekrfile true
+    }  // Run initial stages on any agent
     
     environment {
         REPO_URL = 'https://github.com/iammmarah/jenkinstest.git'

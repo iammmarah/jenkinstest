@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/iammmarah/jenkinstest.git', branch: 'main',
+                git url: 'https://github.com/iammmarah/jenkinstest.git', branch: 'main'
             }
         }
         stage('Build Docker Image') {

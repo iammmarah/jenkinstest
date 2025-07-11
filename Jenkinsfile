@@ -67,10 +67,6 @@ pipeline {
                 sh "docker run -d -p 6100:6100 --name flask-app ${IMAGE_NAME}:latest"
             }
         }
-        // stage('Clean Up') {
-        //     steps {
-        //         sh "docker rmi ${IMAGE_NAME}:${env.BUILD_NUMBER} || true"
-        //     }
-        // }
+
     }
 }
